@@ -17,7 +17,7 @@
 		  <li><a href="#">Контакты</a></li>
 		</ul>
 		<ul class="user-navigation">
-		  <li class="basket">Корзина</li>
+		  <li> <a class="basket" href="#">Корзина</li>
 		</ul>
 	  </nav>
 	</header>
@@ -111,8 +111,22 @@
 	</footer>
 	<section class="write-us">
 	  <h2>Напишите нам</h2>
-	  <!--Здесь будет форма-->
-	  <span class="write-us-close">Закрыть</span>
+	  <form class="write-us-form" method="post" action="https://echo.nerdssupersite.ru" >
+	    <p>
+		  <label for="write-us-name">Ваше имя:</label>
+		  <input id="write-us-name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+		</p>
+		<p>
+		  <label for="write-us-email">Ваш e-mail:</label>
+		  <input id="write-us-email" type="email" name="email" placeholder="Для отправки ответа">
+		</p>
+		<p>
+		  <label for="write-us-textarea">Текст письма:</label>
+		  <textarea id="write-us-textarea" name="textarea">В свободной форме</textarea>
+		</p>
+		<button class="write-us-button" type="submit">Отправить</button>
+	  </form>
+	  <button class="write-us-close">Закрыть</button>
 	</section>
   </body>
 </html>

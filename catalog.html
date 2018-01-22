@@ -17,7 +17,7 @@
 		  <li><a href="#">Контакты</a></li>
 		</ul>
 		<ul class="user-navigation">
-		  <li class="basket">Корзина</li>
+		  <li><a class="basket" href="#">Корзина</a></li>
 		</ul>
 	  </nav>
 	</header>
@@ -27,23 +27,68 @@
 	<main class="container">
 	  <section class="catalog-filter">
 	    <h2 class="visually-hidden">Фильтрация каталога</h2>
-	    <span class="filter-price">Стоимость:</span>
-		<!--Здесь будет форма-->
-		<span class="filter-grid">Сетка:</span>
-		<!--Здесь будет форма-->
-		<span class="filter-features">Особенности:</span>
-		<!--Здесь будет форма-->
+		<form class="filter-form" method="get" action="echo.nerdssupersait.ru">
+		  <!--Поле стоимость не по макету, доработать-->
+		  <fieldset>
+		    <legend>Стоимость:</legend>
+			<input type="range" name="range">
+			<span class="filter-price-low">от</span>
+			<span class="filter-price-high">до</span>
+		  </fieldset>
+		  <fieldset>
+		    <legend>Сетка:</legend>
+			<ul>
+			  <li class="filter-option">
+			    <input class="visually-hidden" type="radio" name="grid-type" id="filter-option-adaptive" checked>
+				<label for="filter-option-adaptive">Адаптивная</label>
+			  </li>
+			  <li class="filter-option">
+			    <input class="visually-hidden" type="radio" name="grid-type" id="filter-option-fixed">
+				<label for="filter-option-fixed">Фиксированная</label>
+			  </li>
+			  <li class="filter-option">
+			    <input class="visually-hidden" type="radio" name="grid-type" id="filter-option-rubber">
+				<label for="filter-option-rubber">Резиновая</label>
+			  </li>
+			</ul>
+		  </fieldset>
+		  <fieldset>
+		    <legend>Особенности:</legend>
+			<ul>
+			  <li>
+			    <input class="visually-hidden" type="checkbox" name="slider" id="filter-option-slider" checked>
+				<label for="filter-option-slider">Слайдер</label>
+			  </li>
+			  <li>
+			    <input class="visually-hidden" type="checkbox" name="features-box" id="filter-option-features-box">
+				<label for="filter-option-features-box">Блок преимуществ</label>
+			  </li>
+			  <li>
+			    <input class="visually-hidden" type="checkbox" name="news" id="filter-option-news" checked>
+				<label for="filter-option-news">Новости</label>
+			  </li>
+			  <li>
+			    <input class="visually-hidden" type="checkbox" name="gallery" id="filter-option-gallery">
+				<label for="filter-option-gallery">Галлерея</label>
+			  </li>
+			  <li>
+			    <input class="visually-hidden" type="checkbox" name="basket" id="filter-option-basket">
+				<label for="filter-option-basket">Корзина</label>
+			  </li>
+			</ul>
+		  </fieldset>
+		</form>
 		<button class="catalog-filter-button" type="button">Показать</button>
 	  </section>
 	  <section class="catalog-sort">
 	    <h2 class="visually-hidden">Сортировка каталога</h2>
 		<span>Сортировать:</span>
 		<ul>
-		  <li class="sort-type">По цене</li>
-		  <li class="sort-type">По типу</li>
-		  <li class="sort-type">По названию</li>
-		  <li class="descending">По убыванию</li>
-		  <li class="asscending">По возрастанию</li>
+		  <li><button class="sort-type" type="button">По цене</button></li>
+		  <li><button class="sort-type" type="button">По типу</button></li>
+		  <li><button class="sort-type" type="button">По названию</button></li>
+		  <li><button class="descending" type="button">По убыванию</button></li>
+		  <li><button class="asscending" type="button">По возрастанию</button></li>
 		</ul>
 	  </section>
 	  <section class="catalog">
@@ -55,7 +100,7 @@
 		  <p>
 		   <span class="catalog-item-name">Sedona</span>
 		   <span class="catalog-item-description">Информационный сайт для туристов</span>
-		   <button class="catalog-item-button">9 900 руб.</button>
+		   <button class="catalog-item-button" type="button">9 900 руб.</button>
 		  </p>
 		</li>
 		<li class="catalog-item">
@@ -65,7 +110,7 @@
 		  <p>
 		   <span class="catalog-item-name">Pink APP</span>
 		   <span class="catalog-item-description">Продуктовый лендинг приложения для IOS и Android</span>
-		   <button class="catalog-item-button">9 900 руб.</button>
+		   <button class="catalog-item-button" type="button">9 900 руб.</button>
 		  </p>
 		</li>
 		<li class="catalog-item">
@@ -75,7 +120,7 @@
 		  <p>
 		   <span class="catalog-item-name">Barbershop</span>
 		   <span class="catalog-item-description">Сайт салонов красоты для мужчин, да.</span>
-		   <button class="catalog-item-button">9 900 руб.</button>
+		   <button class="catalog-item-button" type="button">9 900 руб.</button>
 		  </p>
 		</li>
 		<li class="catalog-item">
@@ -85,7 +130,17 @@
 		  <p>
 		   <span class="catalog-item-name">Mishka</span>
 		   <span class="catalog-item-description">Интернет-магазин вязаных игрушек</span>
-		   <button class="catalog-item-button">9 900 руб.</button>
+		   <button class="catalog-item-button" type="button">9 900 руб.</button>
+		  </p>
+		</li>
+		<li class="catalog-item">
+		  <p>
+		    <img src="img/img-aplus.jpg" width="360" height="576" alt="Сайт Кваст">
+		  </p>
+		  <p>
+		   <span class="catalog-item-name">A PLUS</span>
+		   <span class="catalog-item-description">Лендинг курсов повышения квалификации</span>
+		   <button class="catalog-item-button" type="button">9 900 руб.</button>
 		  </p>
 		</li>
 		<li class="catalog-item">
@@ -95,7 +150,7 @@
 		  <p>
 		   <span class="catalog-item-name">Кваст</span>
 		   <span class="catalog-item-description">Промо-сайт производителя крафтового кваса</span>
-		   <button class="catalog-item-button">9 900 руб.</button>
+		   <button class="catalog-item-button" type="button">9 900 руб.</button>
 		  </p>
 		</li>
 	  </ul>
@@ -125,11 +180,25 @@
 		  </p>
 		</div>
 	  </footer>
-	  <section class="write-us">
-	    <h2>Напишите нам</h2>
-		<!--Здесь будет форма-->
-		<span class="write-us-close">Закрыть</span>
-	  </section>
+	<section class="write-us">
+	  <h2>Напишите нам</h2>
+	  <form class="write-us-form" method="post" action="https://echo.nerdssupersite.ru" >
+	    <p>
+		  <label for="write-us-name">Ваше имя:</label>
+		  <input id="write-us-name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+		</p>
+		<p>
+		  <label for="write-us-email">Ваш e-mail:</label>
+		  <input id="write-us-email" type="email" name="email" placeholder="Для отправки ответа">
+		</p>
+		<p>
+		  <label for="write-us-textarea">Текст письма:</label>
+		  <textarea id="write-us-textarea" name="textarea">В свободной форме</textarea>
+		</p>
+		<button class="write-us-button" type="submit">Отправить</button>
+	  </form>
+	  <button class="write-us-close">Закрыть</button>
+	</section>
 	</main>
   </body>
 </html>
