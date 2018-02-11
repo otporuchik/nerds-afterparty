@@ -1,0 +1,310 @@
+body {
+	margin: 0;
+	padding: 0;
+	
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: rgb(40,49,54);
+	
+	background-color: rgb(255,255,255);
+}
+
+a {
+	text-decoration: none;
+}
+
+.button {
+	font: inherit;
+	line-height: 18px;
+	
+	text-align: center;
+	color: rgb(255,255,255);
+	vertical-align: middle;
+	text-transform: uppercase;
+	
+	background-color: rgb(251,85,89);
+	border: none;
+}
+
+.button:hover,
+.button:focus {
+	background-color: rgb(231,66,70);
+}
+
+.button:active {
+	background-color: rgb(215,54,58);
+	color: rgb(227,115,117);
+}
+
+.main-header-logo {
+	fill: rgb(0,0,0);
+}
+
+.main-header-logo:hover,
+.main-header-logo:focus {
+	fill: rgb(48,48,48);
+}
+
+.main-header-logo:active {
+	fill: rgb(166,166,166);
+}
+
+.main-navigation {
+	line-height: 30px;
+	color: rgb(0,0,0);
+	background-color: rgb(238,238,238);
+}
+
+.site-navigation,
+.user-navigation {
+	list-style: none;
+}
+
+.site-navigation a,
+.user-navigation a {
+	color: rgb(0,0,0);
+}
+
+.site-navigation a:hover,
+.user-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:focus {
+	color: rgb(251,86,90);
+}
+
+.site-navigation a:active,
+.user-navigation a:active {
+	color: rgb(166,166,166);
+}
+
+.features {
+	background-color: rgb(238,238,238);
+}
+
+.features h2 {
+    font-size: 55px;
+    line-height: 55px;
+    color: rgb(0,0,0);
+}
+
+.slide-1 {
+	background-image: url("../img/slide1.png");
+	background-position: top right;
+	background-repeat: no-repeat;
+}
+
+.slide-2 {
+	background-image: url("../img/slide2.png");
+	background-position: top right;
+	background-repeat: no-repeat;
+}
+
+.slide-3 {
+	background-image: url("../img/slide3.png");
+	background-position: top right;
+	background-repeat: no-repeat;
+}
+
+.slider-switches {
+	list-style: none;
+}
+
+.offer-list {
+	list-style: none;
+}
+
+.offer-item:nth-child(1) {
+	background-image: url("../img/illustration-1.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+.offer-item:nth-child(2) {
+	background-image: url("../img/illustration-2.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+.offer-item:nth-child(3) {
+	background-image: url("../img/illustration-3.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+.offer-item:nth-child(2) .button {
+	background-color: rgb(0,201,115);
+}
+
+.offer-item:nth-child(3) .button {
+	background-color: rgb(239,199,73);
+}
+
+.offer-item:nth-child(2) .button:hover,
+.offer-item:nth-child(2) .button:focus {
+	background-color: rgb(0,188,107);
+}
+
+.offer-item:nth-child(2) .button:active {
+	background-color: rgb(0,170,97);
+	color: rgb(77,196,145);
+}
+
+.offer-item:nth-child(3) .button:hover,
+.offer-item:nth-child(3) .button:focus {
+	background-color: rgb(234,180,52);
+}
+
+.offer-item:nth-child(3) .button:active {
+	background-color: rgb(229,167,34);
+	color: rgb(237,194,101);
+}
+
+.possibilities-list {
+	list-style: none;
+}
+
+.description-table {
+	background-image: url("../img/nerds-illustration.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+.clients-list {
+	list-style: none;
+}
+
+.clients-list a {
+	opacity: 0.5;
+}
+
+.clients-list a:hover,
+.clients-list a:focus {
+	opacity: 1;
+}
+
+.clients-list a:active {
+	opacity: 0.2;
+}
+
+.footer-map {
+	background-image: url("../img/map.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.footer-contacts {
+	background-color: rgb(255,255,255);
+}
+
+.social-list {
+	list-style: none;
+}
+
+.vk-icon {
+	background-image: url("../img/vk-icon.svg");
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.fb-icon {
+	background-image: url("../img/fb-icon.svg");
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.insta-icon {
+	background-image: url("../img/insta-icon.svg");
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.social-button {
+	background-color: rgb(225,225,225);
+}
+
+.social-button:hover,
+.social-button:focus {
+	background-color: rgb(231,66,70);
+}
+
+.vk-icon:active {
+	background-color: rgb(215,54,58);
+	background-image: url("../img/vk-icon-active.svg");
+}
+
+.fb-icon:active {
+	background-color: rgb(215,54,58);
+	background-image: url("../img/fb-icon-active.svg");
+}
+
+.insta-icon:active {
+	background-color: rgb(215,54,58);
+	background-image: url("../img/insta-icon-active.svg");
+}
+
+.social-friendship {
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.write-us h2 {
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.write-us-form input[type="text"],
+.write-us-form input[type="email"],
+textarea {
+	font: inherite;
+	color: rgb(68,68,68);
+	
+	border: 2px solid #d7dbdd;
+}
+
+.write-us-form input[type="text"],
+.write-us-form input[type="email"],
+textarea {
+	font: inherite;
+	color: rgb(68,68,68);
+	
+	border: 2px solid #d7dbdd;
+}
+
+.write-us-form input[type="text"]:hover,
+.write-us-form input[type="email"]:hover,
+textarea:hover {
+	border: 2px solid #b3b8bb;
+}
+
+.write-us-form input[type="text"]:focus,
+.write-us-form input[type="email"]:focus,
+textarea:focus {
+	border: 2px solid #000;
+}
+
+.write-us-form input[type="text"]:invalid,
+.write-us-form input[type="email"]:invalid,
+textarea:invalid {
+	color: rgb(231,66,70);
+	
+	border: 2px solid #e74145;
+}
+
+.write-us-close {
+	border: none;
+	background-color: rgb(255,255,255);
+	background-image: url("../img/close-cross.svg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	opacity: 0.5;
+}
+
+.write-us-close:hover,
+.write-us-close:focus {
+	opacity: 1;
+}
+
+.write-us-close:active {
+	opacity: 0.2;
+}
