@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
 	<title>Дизайн-студия "Nerds"</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -166,24 +168,26 @@
 	  </ul>
 	  </section>
 	  <footer class="main-footer">
+	  <div class="footer-map">
 	    <p class="footer-contacts">
 		  <span class="contacts-name">Nerds design studio</span>
 		  <span class="contacts-adress">191186, Санкт Петербург, ул. Б.Конюшенная, д. 19/8</span>
 		  <span class="contacts-phone">тел. +7 (812) 275-75-75</span>
-		  <a href="#">Напишите нам</a>
+		  <button class="button write-us-button" type="button">Напишите нам</button>
+        </p>
+	  </div>
+	  <div class="footer-social">
+		<ul class="social-list">
+		  <li><a class="social-button vk-icon" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+		  <li><a class="social-button fb-icon" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+		  <li><a class="social-button insta-icon" href="#"><span class="visually-hidden">Инстаграмм</span></a></li>
+		</ul>
+		<p>
+		  <span class="social-friendship">Давайте дружить, это выгодно!</span>
+		  Скидка 10% для друзей из социальных сетей.
 		</p>
-		<div class="footer-social">
-		  <ul>
-		    <li><a class="social-button" href="#">Вконтакте</a></li>
-			<li><a class="social-button" href="#">Фейсбук</a></li>
-			<li><a class="social-button" href="#">Инстаграмм</a></li>
-		  </ul>
-		  <p>
-		    <span class="social-friendship">Давайте дружить, это выгодно!</span>
-			Скидка 10% для друзей из социальных сетей.
-		  </p>
-		</div>
-	  </footer>
+	  </div>
+	</footer>
 	<section class="write-us">
 	  <h2>Напишите нам</h2>
 	  <form class="write-us-form" method="post" action="https://echo.nerdssupersite.ru" >
@@ -199,9 +203,9 @@
 		  <label for="write-us-textarea">Текст письма:</label>
 		  <textarea id="write-us-textarea" name="textarea">В свободной форме</textarea>
 		</p>
-		<button class="write-us-button" type="submit">Отправить</button>
+		<button class="button write-us-send-button" type="submit">Отправить</button>
 	  </form>
-	  <button class="write-us-close">Закрыть</button>
+	  <button class="write-us-close" type="button"><span class="visually-hidden">Закрыть</span></button>
 	</section>
 	</main>
   </body>
