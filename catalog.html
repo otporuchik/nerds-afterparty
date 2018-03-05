@@ -33,23 +33,27 @@
 		  <!--Поле стоимость не по макету, доработать-->
 		  <fieldset>
 		    <legend>Стоимость:</legend>
-			<input type="range" name="range">
-			<span class="filter-price-low">от</span>
-			<span class="filter-price-high">до</span>
+			<div class="price-range">
+			  <input type="range" name="range">
+			</div>
+			<span class="filter-price">от</span>
+			<div class="filter-price-low">0</div>
+			<span class="filter-price">до</span>
+			<div class="filter-price-high">15000</div>
 		  </fieldset>
 		  <fieldset>
 		    <legend>Сетка:</legend>
 			<ul>
 			  <li class="filter-option">
-			    <input class="visually-hidden" type="radio" name="grid-type" id="filter-option-adaptive" checked>
+			    <input class="visually-hidden filter-input" type="radio" name="grid-type" id="filter-option-adaptive" checked>
 				<label for="filter-option-adaptive">Адаптивная</label>
 			  </li>
 			  <li class="filter-option">
-			    <input class="visually-hidden" type="radio" name="grid-type" id="filter-option-fixed">
+			    <input class="visually-hidden filter-input" type="radio" name="grid-type" id="filter-option-fixed">
 				<label for="filter-option-fixed">Фиксированная</label>
 			  </li>
 			  <li class="filter-option">
-			    <input class="visually-hidden" type="radio" name="grid-type" id="filter-option-rubber">
+			    <input class="visually-hidden filter-input" type="radio" name="grid-type" id="filter-option-rubber">
 				<label for="filter-option-rubber">Резиновая</label>
 			  </li>
 			</ul>
@@ -58,23 +62,23 @@
 		    <legend>Особенности:</legend>
 			<ul>
 			  <li>
-			    <input class="visually-hidden" type="checkbox" name="slider" id="filter-option-slider" checked>
+			    <input class="visually-hidden filter-input" type="checkbox" name="slider" id="filter-option-slider" checked>
 				<label for="filter-option-slider">Слайдер</label>
 			  </li>
 			  <li>
-			    <input class="visually-hidden" type="checkbox" name="features-box" id="filter-option-features-box">
+			    <input class="visually-hidden filter-input" type="checkbox" name="features-box" id="filter-option-features-box">
 				<label for="filter-option-features-box">Блок преимуществ</label>
 			  </li>
 			  <li>
-			    <input class="visually-hidden" type="checkbox" name="news" id="filter-option-news" checked>
+			    <input class="visually-hidden filter-input" type="checkbox" name="news" id="filter-option-news" checked>
 				<label for="filter-option-news">Новости</label>
 			  </li>
 			  <li>
-			    <input class="visually-hidden" type="checkbox" name="gallery" id="filter-option-gallery">
+			    <input class="visually-hidden filter-input" type="checkbox" name="gallery" id="filter-option-gallery">
 				<label for="filter-option-gallery">Галлерея</label>
 			  </li>
 			  <li>
-			    <input class="visually-hidden" type="checkbox" name="basket" id="filter-option-basket">
+			    <input class="visually-hidden filter-input" type="checkbox" name="basket" id="filter-option-basket">
 				<label for="filter-option-basket">Корзина</label>
 			  </li>
 			</ul>
@@ -86,7 +90,7 @@
 	    <h2 class="visually-hidden">Сортировка каталога</h2>
 		<span>Сортировать:</span>
 		<ul>
-		  <li><button class="sort-type" type="button">По цене</button></li>
+		  <li><button class="sort-type sort-type-active" type="button">По цене</button></li>
 		  <li><button class="sort-type" type="button">По типу</button></li>
 		  <li><button class="sort-type" type="button">По названию</button></li>
 		  <!--

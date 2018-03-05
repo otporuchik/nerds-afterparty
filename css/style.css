@@ -83,9 +83,9 @@ a {
 }
 
 .features h2 {
-    font-size: 55px;
-    line-height: 55px;
-    color: rgb(0,0,0);
+	font-size: 55px;
+	line-height: 55px;
+	color: rgb(0,0,0);
 }
 
 .slide-1 {
@@ -244,13 +244,13 @@ a {
 }
 
 .social-friendship {
-    font-size: 36px;
-    line-height: 36px;
+	font-size: 36px;
+	line-height: 36px;
 }
 
 .write-us h2 {
-    font-size: 45px;
-    line-height: 45px;
+	font-size: 45px;
+	line-height: 45px;
 }
 
 .write-us-form input[type="text"],
@@ -308,3 +308,104 @@ textarea:invalid {
 .write-us-close:active {
 	opacity: 0.2;
 }
+
+/* Стили для каталога */
+
+.filter-form ul,
+.catalog-sort ul,
+.catalog-list,
+.pagination-list
+ {
+	list-style: none;
+}
+
+.catalog-header h1 {
+	font-size: 55px;
+	line-height: 55px;
+	color: rgb(0,0,0);
+	text-align: center;
+}
+
+.filter-form fieldset {
+	border: none;
+}
+
+.price-range,
+.filter-price-low,
+.filter-price-high {
+	background-color: rgb(237, 237, 237);
+}
+
+.filter-form legend {
+	font-size: 18px;
+	line-height: 30px;
+	color: rgb(0,0,0);
+	font-family: "Roboto";
+	font-weight: bold;
+}
+
+.filter-price-low,
+.filter-price-high {
+	text-align: center;
+}
+
+.filter-input + label {
+	opacity: 0.5;
+}
+
+.filter-input:hover + label,
+.filter-input:focus + label {
+	opacity: 1;
+}
+
+.filter-input:disabled + label,
+.filter-input:disabled + label {
+	opacity: 0.2;
+}
+
+.catalog-filter-button {
+	border: none;
+	background-color: rgb(237,237,237);
+	font-size: 16px;
+	line-height: 18px;
+	color: rgb(0,0,0);
+	font-family: "Roboto";
+	text-align: center;
+}
+
+.catalog-filter-button:hover,
+.catalog-filter-button:focus {
+	background-color: rgb(223,223,223);
+}
+
+.catalog-filter-button:active {
+	background-color: rgb(213,213,213);
+	color: rgb(149,149,149);
+}
+
+.catalog-sort span {
+	font-size: 18px;
+	line-height: 18px;
+	color: rgb(0,0,0);
+	font-weight: bold;
+}
+
+.sort-type {
+	border: none;
+	background-color: rgb(255,255,255);
+	
+	font-size: 14px;
+	line-height: 18px;
+	color: rgb(0,0,0,0.5);
+	font-family: "Roboto";
+}
+
+.sort-type:hover {
+	color: rgb(0,0,0,0.8);
+}
+
+.sort-type:active,
+.sort-type-active {
+	color: rgb(0,0,0,1);
+}
+
