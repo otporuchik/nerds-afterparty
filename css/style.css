@@ -409,3 +409,17 @@ textarea:invalid {
 	color: rgb(0,0,0,1);
 }
 
+.catalog-card {
+	margin: 0;
+	padding-top: 40px;
+	width: 360px;
+	
+	background-image: url("../img/browser-light.svg");
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+.catalog-card:hover,
+.catalog-card:focus {
+	background-image: url("../img/browser.svg");
+}
