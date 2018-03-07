@@ -423,3 +423,61 @@ textarea:invalid {
 .catalog-card:focus {
 	background-image: url("../img/browser.svg");
 }
+
+.catalog-item-label {
+	display: none;
+	margin: 0;
+	padding: 0;
+	width: 360px;
+	text-align: center;
+	background-color: rgb(238,238,238);
+}
+
+.catalog-card:hover + .catalog-item-label,
+.catalog-card:focus + .catalog-item-label {
+	display: block;
+}
+
+.catalog-item-name {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	line-height: 30px;
+	color: rgb(0,0,0);
+	font-weight: bold;
+}
+
+.catalog-item-description {
+	margin: 0;
+	padding: 0;
+	line-height: 18px;
+	color: rgb(102,102,102);
+}
+
+.catalog-item img {
+	vertical-align: middle; /*лечим отступ снизу.
+	Картинки по умолчанию — строчные элементы и выравниваются по базовой линии текста,
+	а базовая линия проходит несколько выше, чем нижний край блока — ведь еще резервируется
+	место под «хвостики» букв. Для того, чтобы отступ пропал, достаточно (на выбор) прописать
+	для img или display:block или vertical-align:top/middle/bottom.*/
+}
+
+.catalog-item-button {
+	border: none;
+	background-color: rgb(251,85,89);
+	
+	font-size: 16px;
+	line-height: 18px;
+	color: rgb(255,255,255);
+	font-family: "Roboto";
+	text-align: center;
+}
+
+.catalog-item-button:hover,
+.catalog-item-button:focus {
+	background-color: rgb(231,66,70);
+}
+
+.catalog-item-button:active {
+	background-color: rgb(215,54,58);
+}
