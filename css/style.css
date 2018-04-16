@@ -264,7 +264,7 @@ a {
 	padding-top: 55px;
 	min-height: 415px;
 	background-image: url("../img/map.png");
-	background-position: center center;
+	background-position: top center;
 	background-repeat: no-repeat;
 }
 
@@ -408,14 +408,26 @@ textarea:invalid {
 .catalog-list,
 .pagination-list
  {
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
 .catalog-header h1 {
+	margin: 0;
+	padding: 0;
+	padding-top: 100px;
+	min-height: 160px;
 	font-size: 55px;
 	line-height: 55px;
 	color: rgb(0,0,0);
 	text-align: center;
+	background-color: rgb(238, 238, 238);
+}
+
+.catalog-wrapper {
+	display: flex;
+	justify-content: space-between;
 }
 
 .filter-form fieldset {
@@ -455,6 +467,10 @@ textarea:invalid {
 	opacity: 0.2;
 }
 
+.catalog-filter {
+	width: 261px;
+}
+
 .catalog-filter-button {
 	border: none;
 	background-color: rgb(237,237,237);
@@ -475,11 +491,12 @@ textarea:invalid {
 	color: rgb(149,149,149);
 }
 
-.catalog-sort span {
-	font-size: 18px;
-	line-height: 18px;
-	color: rgb(0,0,0);
-	font-weight: bold;
+.catalog {
+	width: 760px;
+}
+
+.catalog-sort {
+	display: flex;
 }
 
 .sort-type {
@@ -488,17 +505,37 @@ textarea:invalid {
 	
 	font-size: 14px;
 	line-height: 18px;
-	color: rgb(0,0,0,0.5);
+	color: rgba(0,0,0,0.5);
 	font-family: "Roboto";
 }
 
 .sort-type:hover {
-	color: rgb(0,0,0,0.8);
+	color: rgba(0,0,0,0.8);
 }
 
 .sort-type:active,
 .sort-type-active {
-	color: rgb(0,0,0,1);
+	color: rgba(0,0,0,1);
+}
+
+.catalog-sort p {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	line-height: 18px;
+	color: rgb(0,0,0);
+	font-weight: bold;
+}
+
+.catalog-sort ul {
+	display: flex;
+}
+
+.catalog-list {
+	margin-bottom: 60px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .catalog-card {
@@ -572,6 +609,15 @@ textarea:invalid {
 
 .catalog-item-button:active {
 	background-color: rgb(215,54,58);
+}
+
+.pagination-list {
+	margin-bottom: 60px;
+	display: flex;
+}
+
+.pagination-item:not(:nth-child(1)) {
+	margin-left: 10px;
 }
 
 .pagination-item a {
