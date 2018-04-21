@@ -359,6 +359,34 @@ input[type="radio"].visually-hidden {
 
 .clients {
 	margin-bottom: 130px;
+	
+	position: relative;
+}
+
+.clients-list::before {
+	content: "";
+	
+	position: absolute;
+	
+	height: 2px;
+	width: 1160px;
+	
+	top: -45px;
+	
+	background-color: rgb(238,238,238);
+}
+
+.clients-list::after {
+	content: "";
+	
+	position: absolute;
+	
+	height: 2px;
+	width: 1160px;
+	
+	bottom: -40px;
+	
+	background-color: rgb(238,238,238);
 }
 
 .clients-list {
@@ -369,6 +397,24 @@ input[type="radio"].visually-hidden {
 
 .clients-list li {
 	width: 210px;
+}
+
+.right-decoration {
+	position: relative;
+}
+
+.right-decoration a::before {
+	content: "";
+	
+	position: absolute;
+	
+	height: 52px;
+	width: 2px;
+	
+	top: 10px;
+	left: 235px;
+	
+	background-color: rgb(238,238,238);
 }
 
 .clients-list a {
@@ -384,28 +430,6 @@ input[type="radio"].visually-hidden {
 	opacity: 0.2;
 }
 
-.footer-map {
-	margin-bottom: 70px;
-	padding-top: 55px;
-	min-height: 415px;
-	background-image: url("../img/map.png");
-	background-position: top center;
-	background-repeat: no-repeat;
-}
-
-.footer-contacts {
-	margin: 0;
-	margin-left: 140px;
-	padding: 0;
-	padding-top: 55px;
-	width: 310px;
-	background-color: rgb(255,255,255);
-}
-
-.footer-social {
-	display: flex;
-}
-
 .social-list {
 	margin-right: 140px;
 	width: 270px;
@@ -414,8 +438,63 @@ input[type="radio"].visually-hidden {
 	justify-content: space-between;
 }
 
+.contacts-name {
+	display: block;
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.contacts-adress {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.contacts-phone {
+	display: block;
+	margin-bottom: 35px;
+}
+
+.write-us-button {
+	padding: 18px 30px;
+}
+
+.footer-map {
+	margin-bottom: 70px;
+	padding-top: 55px;
+	min-height: 415px;
+	background-image: url("../img/map.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.footer-contacts {
+	box-sizing: border-box;
+	margin: 0;
+	margin-left: 140px;
+	padding: 55px;
+	padding-bottom: 45px;
+	width: 320px;
+	width: 310px;
+	background-color: rgb(255,255,255);
+}
+
+.footer-social {
+	display: flex;
+}
+
 .footer-social p {
-	width: 540px;
+	width: 550px;
+}
+
+.social-list {
+	margin: 0;
+	margin-right: 140px;
+	display: flex;
+	width: 260px;
+	justify-content: space-between;
 }
 
 .vk-icon {
@@ -437,7 +516,14 @@ input[type="radio"].visually-hidden {
 }
 
 .social-button {
+	display: block;
+	
+	width: 80px;
+	height: 80px;
+	
 	background-color: rgb(225,225,225);
+	
+	border-radius: 50%;
 }
 
 .social-button:hover,
@@ -461,8 +547,11 @@ input[type="radio"].visually-hidden {
 }
 
 .social-friendship {
+	display: block;
+	margin-bottom: 15px;
 	font-size: 36px;
 	line-height: 36px;
+	font-weight: bold;
 }
 
 .write-us h2 {
