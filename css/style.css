@@ -783,7 +783,11 @@ textarea:invalid {
 
 .filter-option {
 	margin-bottom: 15px;
+	
+	position: relative;
 }
+
+
 
 .filter-input + label {
 	opacity: 0.5;
