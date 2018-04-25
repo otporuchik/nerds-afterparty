@@ -37,16 +37,23 @@
 					<h2 class="visually-hidden">Фильтрация каталога</h2>
 					<form class="filter-form" method="get" action="echo.nerdssupersait.ru">
 					<!--Поле стоимость не по макету, доработать-->
-						<fieldset>
-							<legend>Стоимость:</legend>
-							<div class="price-range">
-								<input type="range" name="range">
+					<fieldset>
+						<legend>Стоимость:</legend>
+						<div class="price-range">
+							<div class="price-range-bottom">
+								<div></div>
 							</div>
-							<span class="filter-price">от</span>
+							<div class="price-range-top">
+								<div></div>
+							</div>
+						</div>
+						<div class="price-range-wrapper">
+							<span class="filter-price-bottom">от</span>
 							<div class="filter-price-low">0</div>
-							<span class="filter-price">до</span>
+							<span class="filter-price-top">до</span>
 							<div class="filter-price-high">15000</div>
-						</fieldset>
+						</div>
+					</fieldset>
 					<fieldset>
 						<legend>Сетка:</legend>
 						<ul>
@@ -67,23 +74,23 @@
 						<fieldset>
 							<legend>Особенности:</legend>
 							<ul>
-								<li>
+								<li class="filter-option">
 									<input class="visually-hidden filter-input" type="checkbox" name="slider" id="filter-option-slider" checked>
 									<label for="filter-option-slider">Слайдер</label>
 								</li>
-								<li>
+								<li class="filter-option">
 									<input class="visually-hidden filter-input" type="checkbox" name="features-box" id="filter-option-features-box">
 									<label for="filter-option-features-box">Блок преимуществ</label>
 								</li>
-								<li>
+								<li class="filter-option">
 									<input class="visually-hidden filter-input" type="checkbox" name="news" id="filter-option-news" checked>
 									<label for="filter-option-news">Новости</label>
 								</li>
-								<li>
+								<li class="filter-option">
 									<input class="visually-hidden filter-input" type="checkbox" name="gallery" id="filter-option-gallery">
 									<label for="filter-option-gallery">Галлерея</label>
 								</li>
-								<li>
+								<li class="filter-option">
 									<input class="visually-hidden filter-input" type="checkbox" name="basket" id="filter-option-basket">
 									<label for="filter-option-basket">Корзина</label>
 								</li>
