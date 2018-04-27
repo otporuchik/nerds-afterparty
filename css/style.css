@@ -678,8 +678,11 @@ textarea:invalid {
 	text-transform: uppercase;
 }
 
+.filter-form legend:first-of-type {
+	margin-bottom: 56px;
+}
+
 .price-range {
-	margin-top: 56px;
 	margin-bottom: 13px;
 	position: relative;
 	
@@ -916,10 +919,32 @@ input[type="checkbox"]:checked + .label-type-checkbox::before {
 }
 
 .catalog-sort {
+	margin-bottom: 57px;
+	
 	display: flex;
+	justify-content: space-between;
+}
+
+.sort-type-triangle {
+	margin-left: 18px;
+	
+	opacity: 0.5;
+}
+
+.sort-type-triangle:hover {
+	opacity: 0.8;
+}
+
+.sort-type-triangle:active,
+.sort-type-triangle:focus {
+	opacity: 1;
 }
 
 .sort-type {
+	margin: 0;
+	padding: 0;
+	margin-right: 26px;
+	
 	border: none;
 	background-color: rgb(255,255,255);
 	
@@ -927,6 +952,7 @@ input[type="checkbox"]:checked + .label-type-checkbox::before {
 	line-height: 18px;
 	color: rgba(0,0,0,0.5);
 	font-family: "Roboto";
+	text-transform: uppercase;
 }
 
 .sort-type:hover {
@@ -934,6 +960,7 @@ input[type="checkbox"]:checked + .label-type-checkbox::before {
 }
 
 .sort-type:active,
+.sort-type:focus,
 .sort-type-active {
 	color: rgba(0,0,0,1);
 }
@@ -973,13 +1000,32 @@ input[type="checkbox"]:checked + .label-type-checkbox::before {
 	background-image: url("../img/browser.svg");
 }
 
+.catalog-item {
+	margin-bottom: 33px;
+	
+	position: relative;
+}
+
 .catalog-item-label {
 	display: none;
+	
+	position: absolute;
+	
+	transform: translateY(-100%);
+	
 	margin: 0;
 	padding: 0;
+	padding-top: 35px;
+	
 	width: 360px;
+	
 	text-align: center;
+	
 	background-color: rgb(238,238,238);
+}
+
+.catalog-item-label:hover {
+	display: block;
 }
 
 .catalog-card:hover + .catalog-item-label,
@@ -989,6 +1035,7 @@ input[type="checkbox"]:checked + .label-type-checkbox::before {
 
 .catalog-item-name {
 	margin: 0;
+	margin-bottom: 35px;
 	padding: 0;
 	font-size: 18px;
 	line-height: 30px;
@@ -998,6 +1045,7 @@ input[type="checkbox"]:checked + .label-type-checkbox::before {
 
 .catalog-item-description {
 	margin: 0;
+	margin-bottom: 30px;
 	padding: 0;
 	line-height: 18px;
 	color: rgb(102,102,102);
@@ -1012,7 +1060,13 @@ input[type="checkbox"]:checked + .label-type-checkbox::before {
 }
 
 .catalog-item-button {
+	margin-bottom: 43px;
+	
+	width: 200px;
+	height: 50px;
+	
 	border: none;
+	
 	background-color: rgb(251,85,89);
 	
 	font-size: 16px;
@@ -1041,12 +1095,15 @@ input[type="checkbox"]:checked + .label-type-checkbox::before {
 }
 
 .pagination-item a {
+	display: table-cell;
+	
+	width: 50px;
+	height: 50px;
+	
 	color: rgb(0,0,0);
-	background-color: rgb(237,237,237);
-}
-
-.pagination-item a {
-	color: rgb(0,0,0);
+	text-align: center;
+	vertical-align: middle;
+	
 	background-color: rgb(237,237,237);
 }
 
@@ -1057,5 +1114,18 @@ input[type="checkbox"]:checked + .label-type-checkbox::before {
 
 .pagination-item a:active {
 	background-color: rgb(213,213,213);
+}
+
+.pagination-item-current a {
+	width: 44px;
+	height: 44px;
+	
+	border: 3px solid rgb(237,237,237);
+	
+	background-color: rgb(255,255,255);
+}
+
+.pagination-item-next a {
+	width: 260px;
 }
 
