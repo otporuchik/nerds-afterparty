@@ -178,11 +178,59 @@ input[type="radio"].visually-hidden {
 	min-height: 415px;
 }
 
-.slider-switches {
-	list-style: none;
-	display: flex;
-	justify-content: center;
+.main-header {
+	position: relative;
 }
+
+.slider-switches {
+	margin: 0;
+	padding: 0;
+	
+	position: absolute;
+	bottom: 78px;
+	left: 50%;
+	
+	transform: translateX(-50%);
+	
+	list-style: none;
+	
+	display: flex;
+}
+
+.slider-switch {
+	margin: 0;
+	margin-right: 15px;
+	padding: 0;
+}
+
+.slider-switch button {
+	position: relative;
+	
+	width: 18px;
+	height: 18px;
+	
+	border: 0;
+	border-radius: 50%;
+	
+	background-color: rgb(255, 255, 255);
+}
+
+.slider-switch .switch-on::after {
+	content: "";
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	
+	transform: translate(-50%, -50%);
+	
+	width: 5px;
+	height: 5px;
+	
+	border: 2px solid rgb(194, 194, 194);
+	border-radius: 50%;
+}
+
 
 .offer {
 	margin-bottom: 140px;
@@ -552,67 +600,6 @@ input[type="radio"].visually-hidden {
 	font-size: 36px;
 	line-height: 36px;
 	font-weight: bold;
-}
-
-.write-us h2 {
-	font-size: 45px;
-	line-height: 45px;
-}
-
-.write-us-form input[type="text"],
-.write-us-form input[type="email"],
-textarea {
-	font: inherite;
-	color: rgb(68,68,68);
-	
-	border: 2px solid #d7dbdd;
-}
-
-.write-us-form input[type="text"],
-.write-us-form input[type="email"],
-textarea {
-	font: inherite;
-	color: rgb(68,68,68);
-	
-	border: 2px solid #d7dbdd;
-}
-
-.write-us-form input[type="text"]:hover,
-.write-us-form input[type="email"]:hover,
-textarea:hover {
-	border: 2px solid #b3b8bb;
-}
-
-.write-us-form input[type="text"]:focus,
-.write-us-form input[type="email"]:focus,
-textarea:focus {
-	border: 2px solid #000;
-}
-
-.write-us-form input[type="text"]:invalid,
-.write-us-form input[type="email"]:invalid,
-textarea:invalid {
-	color: rgb(231,66,70);
-	
-	border: 2px solid #e74145;
-}
-
-.write-us-close {
-	border: none;
-	background-color: rgb(255,255,255);
-	background-image: url("../img/close-cross.svg");
-	background-position: center center;
-	background-repeat: no-repeat;
-	opacity: 0.5;
-}
-
-.write-us-close:hover,
-.write-us-close:focus {
-	opacity: 1;
-}
-
-.write-us-close:active {
-	opacity: 0.2;
 }
 
 /* Стили для каталога */
@@ -1129,3 +1116,136 @@ input[type="checkbox"]:checked + .label-type-checkbox::before {
 	width: 260px;
 }
 
+/*стили модального (всплывающего) окошка*/
+
+.write-us {
+	display: none;
+	
+	position: fixed;
+	bottom: 180px;
+	left: 50%;
+	transform: translateX(-50%);
+	
+	width: 760px;
+	
+	padding-top: 73px;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-bottom: 84px;
+	
+	background-color: rgb(255, 255, 255);
+	
+	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.write-us h2 {
+	margin: 0;
+	margin-bottom: 49px;
+	padding: 0;
+	
+	font-size: 45px;
+	line-height: 45px;
+}
+
+.write-us-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.write-us-form p {
+	margin: 0;
+	padding: 0;
+	
+	display: flex;
+	flex-direction: column;
+}
+
+.write-us-form label {
+	margin-bottom: 12px;
+	
+	font-weight: bold;
+}
+
+.write-us-form textarea {
+	width: 760px;
+	height: 118px;
+	
+	margin-bottom: 47px;
+}
+
+.write-us-form input[type="text"],
+.write-us-form input[type="email"] {
+	width: 360px;
+	height: 50px;
+	
+	margin-bottom: 36px;
+}
+
+.write-us-form input[type="text"],
+.write-us-form input[type="email"],
+.write-us-form textarea {
+	box-sizing: border-box;
+	
+	padding: 15px;
+	font-family: inherite;
+	font-size: 16px;
+	line-height: 20px;
+	color: rgb(68,68,68);
+	
+	border: 2px solid #d7dbdd;
+}
+
+.write-us-form input[type="text"]:hover,
+.write-us-form input[type="email"]:hover,
+.write-us-form textarea:hover {
+	border: 2px solid #b3b8bb;
+}
+
+.write-us-form input[type="text"]:focus,
+.write-us-form input[type="email"]:focus,
+.write-us-form textarea:focus {
+	border: 2px solid #000;
+}
+
+.write-us-form input[type="text"]:invalid,
+.write-us-form input[type="email"]:invalid,
+.write-us-form textarea:invalid {
+	color: rgb(231,66,70);
+	
+	border: 2px solid #e74145;
+}
+
+.write-us-close {
+	border: none;
+	background-color: rgb(255,255,255);
+	background-image: url("../img/close-cross.svg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	opacity: 0.5;
+	
+	width: 21px;
+	height: 21px;
+	
+	font-size: 0;
+	
+	position: absolute;
+	top: 78px;
+	right: 90px;
+}
+
+.write-us-close:hover,
+.write-us-close:focus {
+	opacity: 1;
+}
+
+.write-us-close:active {
+	opacity: 0.2;
+}
+
+.write-us-send-button {
+	width: 260px;
+	height: 50px;
+	
+	border-radius: 2px;
+}
