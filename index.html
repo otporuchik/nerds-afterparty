@@ -153,5 +153,23 @@
 			</form>
 			<button class="write-us-close" type="button">Закрыть</button>
 		</section>
+		
+		<script>
+			var writeButton = document.querySelector(".write-us-button");
+			var popup = document.querySelector(".write-us");
+			var close = document.querySelector(".write-us-close");
+			
+			writeButton.addEventListener("click", function(evt) {
+				evt.preventDefault();
+				/*console.log("напиши мне нажато");*/
+				popup.classList.add("modal-show");
+			});
+			
+			close.addEventListener("click", function(evt) {
+				evt.preventDefault();
+				popup.classList.remove("modal-show");
+			});
+		</script>
+		
 	</body>
 </html>

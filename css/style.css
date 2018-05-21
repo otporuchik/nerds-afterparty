@@ -1138,6 +1138,10 @@ input[type="checkbox"]:checked + .label-type-checkbox::before {
 	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
 
+.modal-show {
+	display: block;
+}
+
 .write-us h2 {
 	margin: 0;
 	margin-bottom: 49px;
