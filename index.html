@@ -139,15 +139,15 @@
 			<form class="write-us-form" method="post" action="https://echo.nerdssupersite.ru" >
 				<p>
 					<label for="write-us-name">Ваше имя:</label>
-					<input id="write-us-name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+					<input id="write-us-name" type="text" name="sendName" placeholder="Представьтесь, пожалуйста">
 				</p>
 				<p>
 					<label for="write-us-email">Ваш e-mail:</label>
-					<input id="write-us-email" type="email" name="email" placeholder="Для отправки ответа">
+					<input id="write-us-email" type="email" name="sendEmail" placeholder="Для отправки ответа">
 				</p>
 				<p>
 					<label for="write-us-textarea">Текст письма:</label>
-					<textarea id="write-us-textarea" name="textarea">В свободной форме</textarea>
+					<textarea name="sendTextarea" id="write-us-textarea" placeholder="В свободной форме"></textarea>
 				</p>
 				<button class="button write-us-send-button" type="submit">Отправить</button>
 			</form>
@@ -158,16 +158,47 @@
 			var writeButton = document.querySelector(".write-us-button");
 			var popup = document.querySelector(".write-us");
 			var close = document.querySelector(".write-us-close");
+			var sendName = popup.querySelector("[name=sendName]");
+			var storageName = localStorage.getItem("sendName");
+			var sendEmail = popup.querySelector("[name=sendEmail]");
+			var storageEmail = localStorage.getItem("sendEmail");
+			var sendTextarea = popup.querySelector("[name=sendTextarea]");
+			var form = popup.querySelector("form");
 			
-			writeButton.addEventListener("click", function(evt) {
+			writeButton.addEventListener("click", function (evt) {
 				evt.preventDefault();
-				/*console.log("напиши мне нажато");*/
 				popup.classList.add("modal-show");
+				if(storageName && !storageEmail) {
+					sendName.value = storageName;
+					sendEmail.focus();
+				} else if (!storageName && storageEmail) {
+					sendEmail.value = storageEmail;
+					sendName.focus();
+				} else if (!storageName && !storageEmail) {
+					sendName.focus();
+				} else {
+					console.log("i'm here");
+					sendTextarea.focus();
+				}
+				
 			});
 			
-			close.addEventListener("click", function(evt) {
+			form.addEventListener("submit", function (evt) {
+				evt.preventDefault();
+				localStorage.setItem("sendName", sendName.value);
+				localStorage.setItem("sendEmail", sendEmail.value);
+			});
+			close.addEventListener("click", function (evt) {
 				evt.preventDefault();
 				popup.classList.remove("modal-show");
+			});
+			
+			window.addEventListener("keydown", function (evt) {
+				if (evt.keyCode === 27) {
+					if (popup.classList.contains("modal-show")) {
+						popup.classList.remove("modal-show");
+					}
+				}
 			});
 		</script>
 		
