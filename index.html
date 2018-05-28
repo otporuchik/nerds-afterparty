@@ -45,13 +45,13 @@
 			</section>
 			<ul class="slider-switches">
 				<li class="slider-switch">
-					<button class="switch-on" type="button"><span class="visually-hidden">Слайд-1</span></button>
+					<button class="slider-switch-button-1" type="button"><span class="visually-hidden">Слайд-1</span></button>
 				</li>
 				<li class="slider-switch">
-					<button class="switch-off" type="button"><span class="visually-hidden">Слайд-2</span></button>
+					<button class="slider-switch-button-2" type="button"><span class="visually-hidden">Слайд-2</span></button>
 				</li>
 				<li class="slider-switch">
-					<button class="switch-off" type="button"><span class="visually-hidden">Слайд-3</span></button>
+					<button class="slider-switch-button-3" type="button"><span class="visually-hidden">Слайд-3</span></button>
 				</li>
 			</ul>
 		</header>
@@ -164,6 +164,43 @@
 			var storageEmail = localStorage.getItem("sendEmail");
 			var sendTextarea = popup.querySelector("[name=sendTextarea]");
 			var form = popup.querySelector("form");
+			var slideButton1 = document.querySelector(".slider-switch-button-1");
+			var slideButton2 = document.querySelector(".slider-switch-button-2");
+			var slideButton3 = document.querySelector(".slider-switch-button-3");
+			var slide1 = document.querySelector(".slide-1");
+			var slide2 = document.querySelector(".slide-2");
+			var slide3 = document.querySelector(".slide-3");
+			
+			slide2.classList.add("slideOff");
+			slide3.classList.add("slideOff");
+			slideButton1.classList.add("switch-on");
+			
+			slideButton1.addEventListener("click", function() {
+				slide1.classList.remove("slideOff");
+				slide2.classList.add("slideOff");
+				slide3.classList.add("slideOff");
+				slideButton1.classList.add("switch-on");
+				slideButton2.classList.remove("switch-on");
+				slideButton3.classList.remove("switch-on");
+			});
+			
+			slideButton2.addEventListener("click", function() {
+				slide2.classList.remove("slideOff");
+				slide1.classList.add("slideOff");
+				slide3.classList.add("slideOff");
+				slideButton2.classList.add("switch-on");
+				slideButton1.classList.remove("switch-on");
+				slideButton3.classList.remove("switch-on");
+			});
+			
+			slideButton3.addEventListener("click", function() {
+				slide3.classList.remove("slideOff");
+				slide1.classList.add("slideOff");
+				slide2.classList.add("slideOff");
+				slideButton3.classList.add("switch-on");
+				slideButton1.classList.remove("switch-on");
+				slideButton2.classList.remove("switch-on");
+			});
 			
 			writeButton.addEventListener("click", function (evt) {
 				evt.preventDefault();

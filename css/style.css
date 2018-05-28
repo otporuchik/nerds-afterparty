@@ -159,8 +159,6 @@ input[type="radio"].visually-hidden {
 }
 
 .slide-2 {
-	display: none;
-	
 	margin-bottom: 80px;
 	background-image: url("../img/slide2.png");
 	background-position: top right;
@@ -169,13 +167,15 @@ input[type="radio"].visually-hidden {
 }
 
 .slide-3 {
-	display: none;
-	
 	margin-bottom: 80px;
 	background-image: url("../img/slide3.png");
 	background-position: top right;
 	background-repeat: no-repeat;
 	min-height: 415px;
+}
+
+.slideOff {
+	display: none;
 }
 
 .main-header {
@@ -213,6 +213,8 @@ input[type="radio"].visually-hidden {
 	border-radius: 50%;
 	
 	background-color: rgb(255, 255, 255);
+	
+	cursor: pointer;
 }
 
 .slider-switch .switch-on::after {
