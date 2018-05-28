@@ -1138,8 +1138,24 @@ input[type="checkbox"]:checked + .label-type-checkbox::before {
 	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
 
+@keyFrames OutOfInvicible{
+	0% { opacity: 0; }
+	10% { opacity: 0.1; }
+	20% { opacity: 0.2; }
+	30% { opacity: 0.3; }
+	40% { opacity: 0.4; }
+	50% { opacity: 0.5; }
+	60% { opacity: 0.6; }
+	70% { opacity: 0.7; }
+	80% { opacity: 0.8; }
+	90% { opacity: 0.9; }
+	100% { opacity: 1.0; }
+}
+
 .modal-show {
 	display: block;
+	animation-name: OutOfInvicible;
+	animation-duration: 0.5s;
 }
 
 .write-us h2 {
