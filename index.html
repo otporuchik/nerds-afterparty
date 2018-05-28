@@ -176,8 +176,9 @@
 					sendName.focus();
 				} else if (!storageName && !storageEmail) {
 					sendName.focus();
-				} else {
-					console.log("i'm here");
+				} else if (storageName && storageEmail) {
+					sendName.value = storageName;
+					sendEmail.value = storageEmail;
 					sendTextarea.focus();
 				}
 				
@@ -188,6 +189,7 @@
 				localStorage.setItem("sendName", sendName.value);
 				localStorage.setItem("sendEmail", sendEmail.value);
 			});
+			
 			close.addEventListener("click", function (evt) {
 				evt.preventDefault();
 				popup.classList.remove("modal-show");
